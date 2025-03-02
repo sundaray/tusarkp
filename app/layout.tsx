@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
+import { navbarLinks } from "@/config/navbar";
+
+import { MainNav } from "@/components/main-nav";
 
 import "@/app/globals.css";
 
@@ -15,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
+  title: "Tusarakanta Palauri",
 };
 
 type RootLayoutProps = {
@@ -30,6 +33,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
     >
       <body className="bg-background min-h-screen antialiased">
         <NextTopLoader showSpinner={false} color="#2563eb" shadow={false} />
+        <header>
+          <MainNav items={navbarLinks.main} />
+        </header>
         <main className="flex-1 py-16">{children}</main>
       </body>
     </html>
