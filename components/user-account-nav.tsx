@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
+import { buttonVariants } from "@/components/ui/button";
 import { UserAccountNavClient } from "@/components/user-account-nav-client";
 
 export async function UserAccountNav() {
@@ -10,7 +11,7 @@ export async function UserAccountNav() {
     return (
       <Link
         href="/signin"
-        className="rounded-md bg-blue-600 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-blue-500"
+        className={buttonVariants({ variant: "default", size: "sm" })}
       >
         Sign in
       </Link>

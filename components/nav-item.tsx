@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "motion/react";
+import * as motion from "motion/react-client";
 
 import { cn } from "@/lib/utils";
 
@@ -25,7 +25,16 @@ export function NavItem({ href, title }: NavItemProps) {
     >
       {title}
       {isActive && (
-        <div className="bg-secondary-foreground absolute inset-x-0 -bottom-[4px] h-[2px] w-full rounded-full" />
+        <motion.div
+          layoutId="nav-item"
+          transition={{
+            layout: {
+              duration: 0.2,
+              ease: "easeOut",
+            },
+          }}
+          className="bg-secondary-foreground absolute inset-x-0 -bottom-[4px] h-[2px] w-full rounded-full"
+        />
       )}
     </Link>
   );
