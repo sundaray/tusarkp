@@ -5,7 +5,7 @@ import { navbarLinks } from "@/config/navbar";
 
 import { MainNav } from "@/components/main-nav";
 
-import "@/app/globals.css";
+import "@/styles/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,6 +1,10 @@
 import {
   ArrowRight,
+  Check,
   ChevronDown,
+  Copy,
+  Eye,
+  EyeOff,
   Loader,
   LogOut,
   LucideProps,
@@ -8,7 +12,11 @@ import {
 
 export const Icons = {
   arrowRight: ArrowRight,
+  check: Check,
   chevronDown: ChevronDown,
+  copy: Copy,
+  eye: Eye,
+  eyeOff: EyeOff,
   loader: Loader,
   logOut: LogOut,
   google: ({ ...props }: LucideProps) => (
