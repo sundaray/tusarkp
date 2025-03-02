@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
@@ -18,11 +19,14 @@ export function NavItem({ href, title }: NavItemProps) {
     <Link
       className={cn(
         "text-muted-foreground hover:text-primary relative text-sm font-medium transition-colors",
-        isActive && "text-primary"
+        isActive && "text-secondary-foreground",
       )}
       href={href}
     >
       {title}
+      {isActive && (
+        <div className="bg-secondary-foreground absolute inset-x-0 -bottom-[4px] h-[2px] w-full rounded-full" />
+      )}
     </Link>
   );
 }

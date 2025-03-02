@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-import { Icons } from "@/components/icons";
-
 export default function NotFound() {
   return (
     <>
       <div className="mx-auto max-w-xl px-4 text-center">
-        <p className="text-muted-foreground mb-2 text-sm font-medium">404</p>
+        <p className="text-muted-foreground mb-2 font-mono text-sm font-medium">
+          404
+        </p>
         <h2 className="text-secondary-foreground mb-2 text-2xl font-semibold tracking-tight">
           Page not found
         </h2>

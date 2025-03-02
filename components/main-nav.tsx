@@ -18,7 +18,7 @@ export function MainNav({ items }: MainNavProps) {
       <nav>
         <ul className="flex space-x-6">
           {items.map((item) => (
-            <li key={item.title}>
+            <li key={item.title} className="active:scale-95">
               <NavItem title={item.title} href={item.href} />
             </li>
           ))}
